@@ -1,7 +1,7 @@
 document.getElementById("getWeatherBtn").addEventListener("click", function () {
   const apiKey = "e467712b257e418838be97cc881a71de"; // ✅ Use your real key
   const city = "London,uk"; // ✅ Note the "uk" matches Cypress test
-  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+  const apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude=${city}&appid=${apiKey}`;
 
   fetch(apiUrl)
     .then(response => {
